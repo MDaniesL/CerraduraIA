@@ -32,13 +32,14 @@ client1.on_message = on_message
 
 st.title("Cerradura Táctil")
 
-if st.button('ON'):
+if st.button('Open'):
     act1="Abre"
     client1= paho.Client("MDGit25")                           
     client1.on_publish = on_publish                          
     client1.connect(broker,port)  
     message =json.dumps({"gesto":act1})
     ret= client1.publish("MDCasa", message)
+    st.image("open.png")
  
     #client1.subscribe("Sensores")
     
@@ -46,13 +47,14 @@ if st.button('ON'):
 else:
     st.write('')
 
-if st.button('OFF'):
+if st.button('Lock'):
     act1="Cierra"
     client1= paho.Client("MDGit25")                           
     client1.on_publish = on_publish                          
     client1.connect(broker,port)  
     message =json.dumps({"gesto":act1})
     ret= client1.publish("MDCasa", message)
+    st.image("lock.png")
   
     
 else:
