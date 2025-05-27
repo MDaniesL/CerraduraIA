@@ -30,7 +30,9 @@ client1.on_message = on_message
 
 
 
-st.title("Cerradura Táctil")
+st.title("Tactile Lock")
+
+st.image("touch.png")
 
 if st.button('Open'):
     act1="Abre"
