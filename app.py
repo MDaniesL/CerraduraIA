@@ -33,7 +33,7 @@ data = np.ndarray(shape=(1, 224, 224, 3), dtype=np.float32)
 
 st.title("Smart Lock")
 
-st.image("camera.png")
+st.image("camera.png", width=100)
 
 img_file_buffer = st.camera_input("")
 
