@@ -60,7 +60,7 @@ if img_file_buffer is not None:
       st.header('Open')
       client1.publish("MDCasa","{'gesto': 'Abre'}",qos=0, retain=False)
       time.sleep(0.2)
-      st.image("open")  
+      st.image("open.png")  
     if prediction[0][1]>0.3:
       st.header('Locked')
       client1.publish("MDCasa","{'gesto': 'Cierra'}",qos=0, retain=False)
