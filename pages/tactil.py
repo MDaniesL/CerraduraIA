@@ -33,11 +33,11 @@ client1.on_message = on_message
 st.title("MQTT Control")
 
 if st.button('ON'):
-    act1="ON"
+    act1="Abre"
     client1= paho.Client("MDGit25")                           
     client1.on_publish = on_publish                          
     client1.connect(broker,port)  
-    message =json.dumps({"Act1":act1})
+    message =json.dumps({"gesto":act1})
     ret= client1.publish("MDCasa", message)
  
     #client1.subscribe("Sensores")
@@ -47,11 +47,11 @@ else:
     st.write('')
 
 if st.button('OFF'):
-    act1="OFF"
+    act1="Cierra"
     client1= paho.Client("MDGit25")                           
     client1.on_publish = on_publish                          
     client1.connect(broker,port)  
-    message =json.dumps({"Act1":act1})
+    message =json.dumps({"gesto":act1})
     ret= client1.publish("MDCasa", message)
   
     
