@@ -58,11 +58,11 @@ if img_file_buffer is not None:
     print(prediction)
     if prediction[0][0]>0.3:
       st.header('Open')
-        st.image("open.png")
       client1.publish("MDCasa","{'gesto': 'Abre'}",qos=0, retain=False)
       time.sleep(0.2)
+      st.image("open")  
     if prediction[0][1]>0.3:
       st.header('Locked')
-        st.image("lock.png", width=200)
       client1.publish("MDCasa","{'gesto': 'Cierra'}",qos=0, retain=False)
-      time.sleep(0.2)  
+      time.sleep(0.2)
+      st.image("lock.png", width=200)  
