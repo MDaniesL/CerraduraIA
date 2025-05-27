@@ -54,7 +54,7 @@ if st.button('Lock'):
     client1.connect(broker,port)  
     message =json.dumps({"gesto":act1})
     ret= client1.publish("MDCasa", message)
-    st.image("lock.png")
+    st.image("lock.png", width=400)
   
     
 else:
