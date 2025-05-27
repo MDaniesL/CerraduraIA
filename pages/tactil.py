@@ -4,9 +4,6 @@ import streamlit as st
 import json
 import platform
 
-# Muestra la versión de Python junto con detalles adicionales
-st.write("Versión de Python:", platform.python_version())
-
 values = 0.0
 act1="OFF"
 
