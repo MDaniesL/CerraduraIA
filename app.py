@@ -31,9 +31,11 @@ client1.connect(broker,port)
 model = load_model('keras_model.h5')
 data = np.ndarray(shape=(1, 224, 224, 3), dtype=np.float32)
 
-st.title("Cerradura Inteligente")
+st.title("Smart Lock")
 
-img_file_buffer = st.camera_input("Toma una Foto")
+st.image("camera.png")
+
+img_file_buffer = st.camera_input("")
 
 if img_file_buffer is not None:
     # To read image file buffer with OpenCV:
